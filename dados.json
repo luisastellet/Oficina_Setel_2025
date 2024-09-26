@@ -1,0 +1,34 @@
+{
+    "alunos": [
+        {
+            "nome": "Laila Nunes",
+            "idade": 20,
+            "altura": 1.75
+        },
+        {
+            "nome": "Maria Oliveira da Silva",
+            "idade": 22,
+            "altura": 1.65
+        },
+        {
+            "nome": "Pedro Coelho",
+            "idade": 25,
+            "altura": 1.92
+        },
+        {
+            "nome": "Jonathan Paes",
+            "idade": 19,
+            "altura": 1.85
+        },
+        {
+            "nome": "Manuela da Costa",
+            "idade": 23,
+            "altura": 1.65
+        },
+        {
+            "nome": "Alice Cavalcanti",
+            "idade": 22,
+            "altura": 1.70
+        }
+    ]
+}
