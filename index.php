@@ -60,8 +60,8 @@
                         echo "<tr>";
                         // Acessando os dados de cada aluno por meio das chaves/keys
                         echo "<td>" . $aluno['nome'] . "</td>";
-                        echo "<td>" . $aluno['idade'] . "</td>";
-                        echo "<td>" . $aluno['altura'] . "</td>";
+                        echo "<td>" . $aluno['idade'] . " anos" . "</td>";
+                        echo "<td>" . $aluno['altura'] . "m" . "</td>";
                         echo "</tr>";
                     }
                 ?>

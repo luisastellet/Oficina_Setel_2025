@@ -28,17 +28,17 @@
         {
             "nome": "Alice Cavalcanti",
             "idade": 22,
-            "altura": 1.70
+            "altura": 1.71
         },
         {
             "nome": "Luisa Cardoso",
-            "idade": 22,
-            "altura": 1.70
+            "idade": 19,
+            "altura": 1.63
         },
         {
             "nome": "Mateus Gonçalves",
-            "idade": 22,
-            "altura": 1.70
+            "idade": 20,
+            "altura": 1.84
         }
     ]
 }
