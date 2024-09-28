@@ -29,6 +29,16 @@
             "nome": "Alice Cavalcanti",
             "idade": 22,
             "altura": 1.70
+        },
+        {
+            "nome": "Aurora Cavalcanti",
+            "idade": 22,
+            "altura": 1.70
+        },
+        {
+            "nome": "Alice Cavalcanti",
+            "idade": 22,
+            "altura": 1.70
         }
     ]
 }

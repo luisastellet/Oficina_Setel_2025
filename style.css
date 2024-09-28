@@ -1,12 +1,22 @@
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f6f6f6;
+    border-radius: 15px;
+    padding: 20px;
+    margin: auto;
+    width: 80vw;
+    justify-content: center;
+    background-color: #f6f6f6;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Define a altura mínima do elemento para ocupar 100% da altura da viewport */
-    margin: 0;
+    margin: 40px 0 0 0;
+    background: linear-gradient(to bottom, #e0f7ff, #80d0ff, #1a75ff);
 }
 
 img {
@@ -15,20 +25,40 @@ img {
     padding-right: 10px;
 }
 
+div, h1, p {
+    text-align: center;
+}
+
+td {
+    border: 2px solid #0140ff;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    border-collapse: collapse;
+}
+
+table {
+    width: 50vw;
+    margin: 10px auto 45px auto;
+}
+
+th {
+    background-color: #0140ff;
+    color: white;
+    padding: 5px 0 5px 0;
+    border: 2px solid #0140ff;
+}
+
 footer {
-    background-color: lightblue;
+    background-color: #add8e6;
     padding: 15px 0px 10px 0px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 40px;
     gap: 60px;
 }
 
 footer > p {
-    text-align: center;
     margin: 0px 0px 15px 0px;
 }
 
-div {
-    text-align: center;
-}
