@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- Abrindo os arquivos de dados para manipular -->
+<?php
+    $jsonData = file_get_contents('dados.json');
+    $data = json_decode($jsonData, true);
+?>
+
 <!-- Tag head => metadados da página -->
 <head>
     <meta charset="UTF-8">
@@ -10,11 +16,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- Abrindo o arquivo de dados para manipular -->
-<?php
-$jsonData = file_get_contents('data.json');
-$data = json_decode($jsonData, true);
-?>
 
 <!-- Tag body => Parte do código que terá o conteúdo de fato -->
 <body>
@@ -39,16 +40,19 @@ $data = json_decode($jsonData, true);
             </thead>
 
             <tbody>
-                <?php foreach ($data["alunos"] as $aluno):
-                    echo "<tr>";
-                    echo "<td>" . $aluno['nome'] . "<td>";
-                    echo "<td>" . $aluno['idade'] . "</td>";
-                    echo "<td>" . $aluno['altura'] . "</td>";
-                    echo "</tr>";
-                endforeach; ?>
+                <?php
+                    foreach ($data['alunos'] as $aluno){
+                        echo "<tr>";
+                        echo "<td>" . $aluno['nome'] . "</td>";
+                        echo "<td>" . $aluno['idade'] . "</td>";
+                        echo "<td>" . $aluno['altura'] . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
             </tbody>
-
+            
         </table>
+        <p>Obs: Tabela gerada dinamicamente.</p>
 
     </main>
 
