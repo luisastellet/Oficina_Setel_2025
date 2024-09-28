@@ -17,6 +17,7 @@ body {
     min-height: 100vh; /* Define a altura mínima do elemento para ocupar 100% da altura da viewport */
     margin: 40px 0 0 0;
     background: linear-gradient(to bottom, #e0f7ff, #80d0ff, #1a75ff);
+    font-size: large;
 }
 
 img {
@@ -27,6 +28,11 @@ img {
 
 div, h1, p {
     text-align: center;
+}
+
+h1 {
+    font-family: "Playwrite CU", cursive;
+    color: #0140ff;
 }
 
 td {

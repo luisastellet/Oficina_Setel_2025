@@ -12,8 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tag title => Título da página -->
     <title>Oficina de web - SeTel 24</title>
+
+    <!-- Tag link => Importando um arquivo css -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU:wght@100..400&display=swap');
+    </style>
 </head>
 
 
@@ -31,18 +40,25 @@
         <!-- Tag de criação de uma tabela -->
         <table>
 
+            <!-- Tag de cabeçalho da tabela -->
             <thead>
+                <!-- Tag de linha da tabela -->
                 <tr>
+                    <!-- Tag para o cabeçalho da tabela -->
                     <th>Nome</th>
                     <th>Idade</th>
                     <th>Altura</th>
                 </tr>
             </thead>
 
+            <!-- Tag de corpo da tabela -->
             <tbody>
                 <?php
+                    // Usando um foreach, que itera sobre cada aluno
                     foreach ($data['alunos'] as $aluno){
+                        // O echo faz aparecer na tela e o "." concatena os elementos 
                         echo "<tr>";
+                        // Acessando os dados de cada aluno por meio das chaves/keys
                         echo "<td>" . $aluno['nome'] . "</td>";
                         echo "<td>" . $aluno['idade'] . "</td>";
                         echo "<td>" . $aluno['altura'] . "</td>";
@@ -56,9 +72,13 @@
 
     </main>
 
+    <!-- Tag de rodapé -->
     <footer>
         <p>Desenvolvido por: Luisa Stellet e o grupo PET-Tele da UFF.</p>
+
+        <!-- Tag de div (como se fosse uma caixinha) -->
         <div>
+            <!-- Tag de imagem -->
             <img src="Imagens/site.png" alt="Instagram">
             <img src="Imagens/insta.png" alt="Site">
         </div>
