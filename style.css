@@ -45,6 +45,7 @@ td {
 table {
     width: 50vw;
     margin: 10px auto 0px auto;
+    border-collapse: collapse;
 }
 
 th {

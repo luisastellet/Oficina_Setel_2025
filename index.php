@@ -79,8 +79,8 @@
         <!-- Tag de div (como se fosse uma caixinha) -->
         <div>
             <!-- Tag de imagem -->
-            <img src="Imagens/site.png" alt="Instagram">
-            <img src="Imagens/insta.png" alt="Site">
+            <a target="_blank" href="https://www.telecom.uff.br/pet/petws/index.php"><img src="Imagens/site.png" alt="Site"></a>
+            <a target="_blank" href="https://www.instagram.com/petteleuff/"><img src="Imagens/insta.png" alt="Instagram"></a>
         </div>
     </footer>
     
