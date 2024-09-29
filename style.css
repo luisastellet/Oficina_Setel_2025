@@ -1,3 +1,4 @@
+
 main {
     display: flex;
     flex-direction: column;
@@ -18,15 +19,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 30px 0 0 0;
+    margin: 0;
     background: linear-gradient(to bottom, #e0f7ff, #80d0ff, #1a75ff);
     font-size: large;
 }
 
 img {
-    height: 35px;
-    width: 35px;
-    padding-right: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px 10px 0 0;
 }
 
 div, h1, p {
@@ -66,11 +67,11 @@ footer {
     gap: 60px;
     margin-top: 30px;
     background-color: #add8e6;
-    padding: 15px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 footer > p {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 8px 0px;
 }
 
 /* Incluindo a estilização pós inserção do formulário */

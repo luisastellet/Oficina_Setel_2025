@@ -39,6 +39,11 @@
             "nome": "Mateus Gonçalves",
             "idade": 20,
             "altura": 1.84
+        },
+        {
+            "nome": "Larissa Suarez",
+            "idade": 18,
+            "altura": 1.54
         }
     ]
 }

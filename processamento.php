@@ -53,6 +53,8 @@
     ?>
 
     <main>
+        
+
         <?php
             // IMPORTANTE CONHECER O OPERADOR DE NAVE ESPACIAL:
         
@@ -66,6 +68,19 @@
                 // O $_POST coleta dados de um form HTML com o método POST.
                 $opcao_escolhida = $_POST['opcao_escolhida'];
 
+                // Iniiando a tabela.
+                echo "<table>";
+                echo "<thead>";
+                    // Tag de linha da tabela.
+                    echo "<tr>";
+                    //Tag para o cabeçalho da tabela.
+                        echo "<th>Nome</th>";
+                        echo "<th>Idade</th>";
+                        echo "<th>Altura</th>";
+                    echo "</tr>";
+                echo "</thead>";
+                echo "<tbody>";
+
                 // Deseja exibir a ordenação por nome.
                 if($opcao_escolhida == 'opcao1') { // NOME
 
@@ -73,7 +88,6 @@
                     $vetor_ordenado = ordem_alfabetica($dados["alunos"]);
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<table>";
                     echo "<h2> Dados dispostos em ordem alfabética de nome:</h2>";
                     foreach ($vetor_ordenado as $aluno) {
                         echo "<tr>";
@@ -81,9 +95,7 @@
                         echo "<td>" . $aluno['idade'] . " anos" . "</td>";
                         echo "<td>" . $aluno['altura'] . "m" . "</td>";
                         echo "</tr>";
-                    }
-                    echo "</table>";
-                    echo "<p> OBS: Tabela gerada dinamicamente. </p>";
+                    }                    
 
                 // Deseja exibir a ordenação por idade.
                 } else if($opcao_escolhida == 'opcao2') { // IDADE
@@ -98,7 +110,7 @@
                     });
                     
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<table>";
+                    
                     echo "<h2> Dados dispostos em ordem crescente de idade: </h2>";
                     foreach ($vetor_ordenado as $aluno) {
                         echo "<tr>";
@@ -107,8 +119,6 @@
                         echo "<td>" . $aluno['altura'] . "m" . "</td>";
                         echo "</tr>";
                     }
-                    echo "</table>";
-                    echo "<p> OBS: Tabela gerada dinamicamente. </p>";
 
                 // Deseja exibir a ordenação por altura.
                 } else if($opcao_escolhida == 'opcao3') { // ALTURA
@@ -123,7 +133,6 @@
                     });
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<table>";
                     echo "<h2> Dados dispostos em ordem descresente de altura: </h2>";
                     foreach ($vetor_ordenado as $aluno) {
                         echo "<tr>";
@@ -132,10 +141,11 @@
                         echo "<td>" . $aluno['altura'] . "m" . "</td>";
                         echo "</tr>";
                     }
-                    echo "</table>";
-                    echo "<p> OBS: Tabela gerada dinamicamente. </p>";
         
                 }
+                echo "</tbody>";
+                echo "</table>";
+                echo "<p> OBS: Tabela gerada dinamicamente. </p>";
             }
 
             ?>
