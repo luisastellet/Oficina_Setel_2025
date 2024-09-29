@@ -34,7 +34,7 @@
         <h1>Oficina de Pacote web</h1>
 
         <!-- Tag de parágrafo -->
-        <p>Esta oficina está sendo oferecida durante a VIII Semana de Computação da Universidade Federal Fluminense (UFF) para a SeTel 24 pelos alunos do grupo PET-Tele.</p>
+        <p>Esta oficina está sendo oferecida durante a XIV Semana de Telecomunicações (SeTel 2024) pelos alunos do grupo PET-Tele.</p>
    
 
         <!-- Tag de criação de uma tabela -->
@@ -60,8 +60,8 @@
                         echo "<tr>";
                         // Acessando os dados de cada aluno por meio das chaves/keys
                         echo "<td>" . $aluno['nome'] . "</td>";
-                        echo "<td>" . $aluno['idade'] . "</td>";
-                        echo "<td>" . $aluno['altura'] . "</td>";
+                        echo "<td>" . $aluno['idade'] . " anos" . "</td>";
+                        echo "<td>" . $aluno['altura'] . "m" . "</td>";
                         echo "</tr>";
                     }
                 ?>
@@ -79,8 +79,8 @@
         <!-- Tag de div (como se fosse uma caixinha) -->
         <div>
             <!-- Tag de imagem -->
-            <img src="Imagens/site.png" alt="Instagram">
-            <img src="Imagens/insta.png" alt="Site">
+            <a target="_blank" href="https://www.telecom.uff.br/pet/petws/index.php"><img src="Imagens/site.png" alt="Site"></a>
+            <a target="_blank" href="https://www.instagram.com/petteleuff/"><img src="Imagens/insta.png" alt="Instagram"></a>
         </div>
     </footer>
     
