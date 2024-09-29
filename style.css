@@ -1,21 +1,24 @@
 main {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    /* flex-grow: 1; Faz com que o main ocupe o espaço disponível */
+    justify-content: center;
+    margin: auto;
+    width: 80vw;
+    background-color: #f6f6f6;
     border: 2px solid #f6f6f6;
     border-radius: 15px;
     padding: 20px;
-    margin: auto;
-    width: 80vw;
-    justify-content: center;
-    background-color: #f6f6f6;
+
+    /* min-height: 100vh: Se o conteúdo for maior, o elemento crescerá para acomodar o conteúdo. */
+    /* height: 100vh: Se o conteúdo for maior, ele será cortado ou causará overflow. */
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Define a altura mínima do elemento para ocupar 100% da altura da viewport */
-    margin: 40px 0 0 0;
+    min-height: 100vh;
+    margin: 30px 0 0 0;
     background: linear-gradient(to bottom, #e0f7ff, #80d0ff, #1a75ff);
     font-size: large;
 }
@@ -33,6 +36,7 @@ div, h1, p {
 h1 {
     font-family: "Playwrite CU", cursive;
     color: #0140ff;
+    margin: 0;
 }
 
 td {
@@ -56,16 +60,74 @@ th {
 }
 
 footer {
-    background-color: #add8e6;
-    padding: 15px 0px 10px 0px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 40px;
     gap: 60px;
+    margin-top: 30px;
+    background-color: #add8e6;
+    padding: 15px 0px 10px 0px;
 }
 
 footer > p {
     margin: 0px 0px 15px 0px;
 }
 
+/* Incluindo a estilização pós inserção do formulário */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50vw;
+    margin: 5px auto 15px auto;
+    border: 2px solid #0140ff;
+    border-radius: 15px;
+    padding: 15px 0;
+}
+
+label {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+select {
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #0140ff;
+    font-size: medium;
+    padding: 2px 0;
+
+}
+
+input {
+    border-radius: 5px;
+    width: 80px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #0140ff;
+    color: white;
+    border: 1px solid #0140ff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 0 0 10px;
+}
+
+h2 {
+    font-family: "Playwrite CU", cursive;
+    color: #0140ff;
+    text-align: center;
+
+}
+
+#botao-voltar {
+    background-color: #0140ff;
+    color: white;
+    border: 1px solid #0140ff;
+    border-radius: 5px;
+    padding: 8px 0;
+    margin: 15px 0 30px 0;
+    width: 100px;
+}

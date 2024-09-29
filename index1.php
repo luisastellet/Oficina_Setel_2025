@@ -4,8 +4,8 @@
 
 <!-- Abrindo os arquivos de dados para manipular -->
 <?php
-    $jsonData = file_get_contents('dados.json');
-    $data = json_decode($jsonData, true);
+    $json_data = file_get_contents('dados.json');
+    $data = json_decode($json_data, true);
 ?>
 
 <!-- Tag head => metadados da página -->
@@ -68,6 +68,28 @@
             
         </table>
         <p>Obs: Tabela gerada dinamicamente.</p>
+        
+        <!-- Tag de seção -->
+        <section>
+
+            <!-- Tag de label => rótulo para um campo de formulário -->
+            <label for="opcao">Selecione uma opção:</label>
+
+            <!-- Tag de formulário para envio de dados -->
+            <form action="processamento.php" method="post">
+
+                <!-- Tag de seleção de opção -->
+                <select name="opcao_escolhida">
+                    <!-- Tag de opção -->
+                    <option value="opcao1">Nome</option>
+                    <option value="opcao2">Idade</option>
+                    <option value="opcao3">Altura</option>
+                </select>
+
+                <!-- Tag de botão de envio -->
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
 
     </main>
 
