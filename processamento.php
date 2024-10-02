@@ -15,7 +15,7 @@
     <?php
 
         // Ajustando a localização para utilizar o UTF-8.
-        setlocale(LC_ALL, 'en_US-UTF-8');
+        setlocale(LC_ALL, 'en_US.UTF-8');
 
         // Lendo o arquivo json.
         $json_data = file_get_contents('dados.json');
