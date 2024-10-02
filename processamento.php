@@ -13,12 +13,13 @@
 <body>
 
     <?php
+
+        // Ajustando a localização para utilizar o UTF-8.
+        setlocale(LC_ALL, 'en_US-UTF-8');
+
         // Lendo o arquivo json.
         $json_data = file_get_contents('dados.json');
         $dados = json_decode($json_data, true);
-
-        // Ajustes para ordenação correta, com base no UTF-8.
-        setlocale(LC_ALL, 'pt_BR.utf-8');
     ?>
 
     <main>
@@ -32,6 +33,16 @@
             // Retorna 0 se forem iguais.
             // Retorna 1 se $b['altura'] for maior que $a['altura'].
             // Retorna o método de requisição utilizado (por exemplo, GET, POST, PUT, etc.).
+
+
+            // ENTENDENDO OS TIPOS DE ORDENAÇÃO:
+
+            // SORT() => Ordena um array em ordem crescente.
+            // RSORT() => Ordena um array em ordem decrescente.
+            // ASORT() => Ordena um array associativo em ordem crescente, mas prrserva as chaves associativas.
+            // USORT() => Ordena um array utilizando uma função de comparação definida pelo usuário.
+            // KSORT() => Ordena um array pelas chaves em ordem crescente.
+
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // O $_POST coleta dados de um form HTML com o método POST.
@@ -53,12 +64,14 @@
                 // Deseja exibir a ordenação por nome.
                 if($opcao_escolhida == 'opcao1') { // NOME
 
-                    // Garantindo que em caso de empate, priorizará a ordem alfabética.
-                    sort($dados["alunos"], SORT_LOCALE_STRING);
+                    // Garantindo a ordenação por ordem alfabética.
+                    usort($dados['alunos'], function($a, $b) {
+                        return strcoll($a['nome'], $b['nome']);
+                    });
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<h2> Dados dispostos em ordem alfabética de nome:</h2>";
-                    foreach ($vetor_ordenado as $aluno) {
+                    echo "<h2> Dados dispostos em ordem alfabética de nome :</h2>";
+                    foreach ($dados['alunos'] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
                         echo "<td>" . $aluno['idade'] . " anos" . "</td>";
@@ -70,18 +83,20 @@
                 } else if($opcao_escolhida == 'opcao2') { // IDADE
         
                     // Garantindo que em caso de empate, priorizará a ordem alfabética.
-                    sort($dados["alunos"], SORT_LOCALE_STRING);
+                    usort($dados['alunos'], function($a, $b) {
+                        return strcoll($a['nome'], $b['nome']);
+                    });
 
                     // Utilizando a função usort() que ordena baseado em uma função de comparação.
-                    usort($vetor_ordenado, function($a, $b) {
+                    usort($dados['alunos'], function($a, $b) {
                         // Quem for mais novo aparece primeiro
                         return $a['idade'] <=> $b['idade'];
                     });
                     
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
                     
-                    echo "<h2> Dados dispostos em ordem crescente de idade: </h2>";
-                    foreach ($vetor_ordenado as $aluno) {
+                    echo "<h2> Dados dispostos em ordem crescente de idade : </h2>";
+                    foreach ($dados["alunos"] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
                         echo "<td>" . $aluno['idade'] . " anos" . "</td>";
@@ -93,17 +108,19 @@
                 } else if($opcao_escolhida == 'opcao3') { // ALTURA
 
                     // Garantindo que em caso de empate, priorizará a ordem alfabética.
-                    sort($dados["alunos"], SORT_LOCALE_STRING);
+                    usort($dados['alunos'], function($a, $b) {
+                        return strcoll($a['nome'], $b['nome']);
+                    });
 
                     // Utilizando a função usort() que ordena baseado em uma função de comparação.
-                    usort($vetor_ordenado, function($a, $b) {
+                    usort($dados['alunos'], function($a, $b) {
                         // Quem for mais alto aparece primeiro.
                         return $b['altura'] <=> $a['altura'];
                     });
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
                     echo "<h2> Dados dispostos em ordem descresente de altura: </h2>";
-                    foreach ($vetor_ordenado as $aluno) {
+                    foreach ($dados['alunos'] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
                         echo "<td>" . $aluno['idade'] . " anos" . "</td>";
