@@ -1,3 +1,10 @@
+:root {
+    --azul-principal: #0140ff;
+    --azul-medio : #80d0ff;
+    --azul-claro : #e0f7ff;
+    --cor-fundo : #f6f6f6;
+}
+
 
 main {
     display: flex;
@@ -6,8 +13,8 @@ main {
     justify-content: center;
     margin: auto;
     width: 80vw;
-    background-color: #f6f6f6;
-    border: 2px solid #f6f6f6;
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-fundo);
     border-radius: 15px;
     padding: 20px;
 
@@ -20,7 +27,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #e0f7ff, #80d0ff, #1a75ff);
+    background: linear-gradient(to bottom, var(--azul-claro), var(--azul-medio), #1a75ff);
     font-size: large;
 }
 
@@ -36,12 +43,12 @@ div, h1, p {
 
 h1 {
     font-family: "Playwrite CU", cursive;
-    color: #0140ff;
+    color: var(--azul-principal);
     margin: 0;
 }
 
 td {
-    border: 2px solid #0140ff;
+    border: 2px solid var(--azul-principal);
     text-align: center;
     padding: 5px 0 5px 0;
     border-collapse: collapse;
@@ -54,10 +61,10 @@ table {
 }
 
 th {
-    background-color: #0140ff;
+    background-color: var(--azul-principal);
     color: white;
     padding: 5px 0 5px 0;
-    border: 2px solid #0140ff;
+    border: 2px solid var(--azul-principal);
 }
 
 footer {
@@ -83,7 +90,7 @@ section {
     flex-wrap: wrap;
     width: 50vw;
     margin: 5px auto 15px auto;
-    border: 2px solid #0140ff;
+    border: 2px solid var(--azul-principal);
     border-radius: 15px;
     padding: 15px 0;
 }
@@ -97,7 +104,7 @@ label {
 select {
     width: 150px;
     border-radius: 5px;
-    border: 1px solid #0140ff;
+    border: 1px solid var(--azul-principal);
     font-size: medium;
     padding: 2px 0;
 
@@ -108,9 +115,9 @@ input {
     width: 80px;
     font-size: medium;
     font-weight: bold;
-    background-color: #0140ff;
+    background-color: var(--azul-principal);
     color: white;
-    border: 1px solid #0140ff;
+    border: 1px solid var(--azul-principal);
     border-radius: 5px;
     padding: 5px 10px;
     margin: 0 0 0 10px;
@@ -118,17 +125,56 @@ input {
 
 h2 {
     font-family: "Playwrite CU", cursive;
-    color: #0140ff;
+    color: var(--azul-principal);
     text-align: center;
 
 }
 
 #botao-voltar {
-    background-color: #0140ff;
+    background-color: var(--azul-principal);
     color: white;
-    border: 1px solid #0140ff;
+    border: 1px solid var(--azul-principal);
     border-radius: 5px;
     padding: 8px 0;
     margin: 15px 0 30px 0;
     width: 100px;
+}
+
+/* Acrescentando configurações de responsividade */
+
+@media screen and (max-width: 913px) {
+    
+    body {
+        font-size: smaller;
+    }
+
+    h1, h2{
+        color: var(--azul-medio);
+    }
+
+    th {
+        background-color: var(--azul-medio);
+        border: 2px solid var(--azul-medio);
+    }
+
+    td, section {
+        border: 2px solid var(--azul-medio);
+    }
+
+    select {
+        width: 100px;
+        padding: 1px;
+        border: 1px solid var(--azul-medio);
+        font-size: smaller;
+    }
+
+    input[type="submit"], #botao-voltar {
+        width: 70px;
+        padding: 1px;
+        background-color: var(--azul-medio);
+        border: 1px solid var(--azul-medio);
+    }  
+
+    
+    
 }

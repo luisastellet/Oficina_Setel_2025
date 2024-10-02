@@ -119,7 +119,7 @@
                     });
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<h2> Dados dispostos em ordem descresente de altura: </h2>";
+                    echo "<h2> Dados dispostos em ordem descresente de altura : </h2>";
                     foreach ($dados['alunos'] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
