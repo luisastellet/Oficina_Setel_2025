@@ -5,7 +5,7 @@
 </div>
 <hr>
 
-<p style="font-family: sans-serif">Projeto desenvolvido por mim e pelo grupo PET-Tele da UFF para a aplicação da oficina de pacote web (HTML, CSS, JSON e PHP) durante a XIV Semana de Telecomunicações - SeTel 2024.</p>
+<p style="font-family: sans-serif">Projeto desenvolvido por mim e pelo grupo PET-Tele da UFF para a aplicação da oficina de pacote web (HTML, CSS, JSON e PHP) durante a XV Semana de Telecomunicações - SeTel 2024.</p>
 
  <hr>
 
