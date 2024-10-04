@@ -15,7 +15,12 @@
     <?php
 
         // Ajustando a localização para utilizar o UTF-8.
-        setlocale(LC_ALL, 'en_US.UTF-8');
+        //
+        //setlocale(LC_ALL, 'en_US.UTF-8');
+        //
+        //echo "Language: < " . setlocale(LC_COLLATE, "0") . " >";
+        //
+        $locale_str = setlocale(LC_COLLATE, "pt_BR.UTF-8");
 
         // Lendo o arquivo json.
         $json_data = file_get_contents('dados.json');
@@ -131,7 +136,8 @@
                 }
                 echo "</tbody>";
                 echo "</table>";
-                echo "<p> OBS: Tabela gerada dinamicamente. </p>";
+		echo "<p>Tabela gerada dinamicamente.<br>";
+                echo '<i>Locale string</i> = "' . $locale_str . '".</p>';
             }
 
             ?>
