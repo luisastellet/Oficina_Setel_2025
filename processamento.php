@@ -94,13 +94,16 @@
 
                     // Utilizando a função usort() que ordena baseado em uma função de comparação.
                     usort($dados['alunos'], function($a, $b) {
-                        // Quem for mais novo aparece primeiro
-                        return $a['idade'] <=> $b['idade'];
+                        // Quem for mais velho aparece primeiro
+                        if($a['idade'] < $b['idade']) return 1;
+                        else if($a['idade'] > $b['idade']) return -1;
+                        return 0;
+                        // return $b['idade'] <=> $a['idade'];
                     });
                     
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
                     
-                    echo "<h2> Dados dispostos em ordem crescente de idade : </h2>";
+                    echo "<h2> Dados dispostos em ordem decrescente de idade : </h2>";
                     foreach ($dados["alunos"] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
@@ -119,12 +122,12 @@
 
                     // Utilizando a função usort() que ordena baseado em uma função de comparação.
                     usort($dados['alunos'], function($a, $b) {
-                        // Quem for mais alto aparece primeiro.
-                        return $b['altura'] <=> $a['altura'];
+                        // Quem for mais baixo aparece primeiro.
+                        return $a['altura'] <=> $b['altura'];
                     });
 
                     // Varrendo o vetor aluno por aluno já na ordem desejada.
-                    echo "<h2> Dados dispostos em ordem descresente de altura : </h2>";
+                    echo "<h2> Dados dispostos em ordem crescente de altura : </h2>";
                     foreach ($dados['alunos'] as $aluno) {
                         echo "<tr>";
                         echo "<td>" . $aluno['nome'] . "</td>";
