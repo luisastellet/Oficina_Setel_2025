@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="Imagens/logo_pet.png"width=" 80px">
-  <img src="Imagens/logo2024.png"width=" 80px">
+  <img src="Completo/Imagens/logo_pet.png"width=" 80px">
+  <img src="Completo/Imagens/logo2024.png"width=" 80px">
   <h1 style="font-style: italic; color: #6495ED; ">Oficina Webpages (HTML, CSS, JSON e PHP)</h1>
 </div>
 <hr>
