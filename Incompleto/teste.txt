@@ -1,0 +1,4 @@
+sudo service apache2 stop
+sudo /opt/lampp/lampp startapache
+
+abrir navegador

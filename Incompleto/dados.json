@@ -1,0 +1,19 @@
+{
+    "alunos": [
+        {
+            "nome": "Laila Nunes",
+            "idade": 20,
+            "altura": 1.75
+        },
+        {
+            "nome": "Maria de Oliveira",
+            "idade": 22,
+            "altura": 1.65
+        },
+        {
+            "nome": "Pedro Coelho",
+            "idade": 25,
+            "altura": 1.92
+        }
+    ]
+}
